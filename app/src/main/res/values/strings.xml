@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="arrow">Arrow</string>
+    <string name="icon">Icon</string>
+    <string name="new_announcement">New Announcement</string>
+    <string name="close">Close</string>
+    <string name="set_announcement_description">Set announcement description</string>
+    <string name="departments_jobs">Departments/Jobs</string>
+    <string name="employees_to_alert">Employees to Alert</string>
+    <string name="add_attachment">Add Attachment</string>
+    <string name="announcement">  Announcement</string>
+    <string name="create">CREATE</string>
+</resources>

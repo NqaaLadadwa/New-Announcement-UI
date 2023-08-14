@@ -1,0 +1,80 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="startDate"
+            type="com.example.test.StartDateData" />
+
+        <variable
+            name="expirationDate"
+            type="com.example.test.ExpirationDateData" />
+
+        <variable
+            name="locations"
+            type="com.example.test.LocationsData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/start_date"
+                 bind:startDate="@{startDate}"
+                    />
+
+                <include layout="@layout/expiration_date_layout"
+                    bind:expirationDate="@{expirationDate}" />
+
+                <include layout="@layout/locations_layout"
+                    bind:locations="@{locations}" />
+
+                <!-- Include the departments_layout -->
+                <include layout="@layout/departments_layout" />
+
+                <!-- Include the employees_layout -->
+                <include layout="@layout/employees_layout" />
+
+                <!-- Include the attachment_layout -->
+                <include layout="@layout/attachment_layout" />
+
+                <!-- Include the announcement_layout -->
+                <include layout="@layout/announcement_layout" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:onClick="onSubmitClicked"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="7dp"
+            android:text="@string/create"
+            android:background="@drawable/rounded"
+            />
+
+    </LinearLayout>
+
+</layout>
