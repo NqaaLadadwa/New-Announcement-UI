@@ -1,6 +1,5 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:bind="http://schemas.android.com/apk/res-auto"
-    >
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -37,10 +36,13 @@
 
                 <include layout="@layout/start_date"
                  bind:startDate="@{startDate}"
+                    android:id="@+id/start"
                     />
 
                 <include layout="@layout/expiration_date_layout"
-                    bind:expirationDate="@{expirationDate}" />
+                    bind:expirationDate="@{expirationDate}"
+                    android:id="@+id/exp"
+                    />
 
                 <include layout="@layout/locations_layout"
                     bind:locations="@{locations}" />
@@ -74,6 +76,7 @@
             android:text="@string/create"
             android:background="@drawable/rounded"
             />
+
 
     </LinearLayout>
 
